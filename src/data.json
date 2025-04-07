@@ -1,0 +1,73 @@
+{
+    "movie" : [
+        {
+            "_id": {
+              "$oid": "573a1390f29313caabcd56df"
+            },
+            "genres": [
+              "Drama"
+            ],
+            "runtime": "1 hr 20 mins",
+            "title": "Dragon",
+            "languages": [
+              "Tamil"
+            ],
+            "createdAt": {
+              "$date": "2025-03-05T00:00:00.000Z"
+            },
+            "posterimg": "Dragonpotriat.avif"
+          },
+          {
+            "_id": {
+              "$oid": "573a1390f29313caabcd56df"
+            },
+            "genres": [
+              "Drama"
+            ],
+            "runtime": "2 hr 30 mins",
+            "title": "Veera Dheera Sora",
+            "languages": [
+              "Tamil"
+            ],
+            "createdAt": {
+              "$date": "2025-03-05T00:00:00.000Z"
+            },
+            "posterimg": "veeraposter.avif"
+          },
+          {
+            "_id": {
+              "$oid": "573a1390f29313caabcd56df"
+            },
+            "genres": [
+              "Drama"
+            ],
+            "runtime": "1 hr 20 mins",
+            "title": "Asthiram",
+            "languages": [
+              "Tamil"
+            ],
+            "createdAt": {
+              "$date": "2025-03-05T00:00:00.000Z"
+            },
+            "posterimg": "asthiramposter.avif"
+          },
+          {
+            "_id": {
+              "$oid": "573a1390f29313caabcd56df"
+            },
+            "genres": [
+              "Drama"
+            ],
+            "runtime": "2 hr 30 mins",
+            "title": "Door",
+            "languages": [
+              "Tamil"
+            ],
+            "createdAt": {
+              "$date": "2025-03-05T00:00:00.000Z"
+            },
+            "posterimg": "doorposter.avif"
+          }
+    ]
+}
+
