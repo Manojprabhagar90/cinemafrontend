@@ -89,6 +89,10 @@ const Navbar = () => {
           }
       }
 
+    useEffect(()=>{
+        home();
+      },[])
+
       const resetAll = () => {
         dispatch(setshowCity(false));
       };
