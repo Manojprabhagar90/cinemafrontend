@@ -88,10 +88,7 @@ const Navbar = () => {
             navigate('/');
           }
       }
-
-    useEffect(()=>{
-        home();
-      },[])
+      
 
       const resetAll = () => {
         dispatch(setshowCity(false));
@@ -108,7 +105,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex justify-center items-center gap-6">
-          <p className='text-2xl  caret-transparent font-bold text-black' onClick={()=>home()}>MOVIE<span className='text-orange-500'>PAL</span></p>
+          <p className='text-2xl  caret-transparent cursor-pointer font-bold text-black' onClick={()=>home()}>MOVIE<span className='text-orange-500'>PAL</span></p>
           
         </div>
 

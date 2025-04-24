@@ -6,6 +6,7 @@ import axios from 'axios';
 import { setScreen, setScreenId, setShow, setShowId, setTheater, setTheaterList, viewScreen, viewShow, viewTheater, viewTheaterList } from '../redux/theaterSlice';
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../services/config';
+import { viewselectedCity } from '../redux/NavbarSlice';
 const TheaterList = () => {
 
     const [nextDays,setnextDays] = useState([]);
@@ -15,6 +16,7 @@ const TheaterList = () => {
     const theaterobj = useSelector(viewTheater);
     const screenobj = useSelector(viewScreen);
     const showobj = useSelector(viewShow);
+    const selectedCity = useSelector(viewselectedCity);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -70,14 +72,14 @@ const TheaterList = () => {
     useEffect(()=>{
         
         try {
-               axios.get(`${BASE_URL}/theater/${movie._id}/${new Date(selectedDate)}`).then(response=>{
+               axios.get(`${BASE_URL}/theater/${movie._id}/${new Date(selectedDate)}/${selectedCity}`).then(response=>{
                 dispatch(setTheaterList(response.data));
                }).catch(err=>console.log(err))
              } catch (error) {
                  alert(error.response.data.message);
              }
          
-   },[selectedDate]);
+   },[selectedDate,selectedCity]);
   
     
     //setnextDays(next7Days)
@@ -100,7 +102,7 @@ const TheaterList = () => {
         </div>
       </div>
       
-      <div className='flex gap-2 py-1 px-44 border-b-2 border-solid border-gray-400 bg-white sticky top-0'>
+      <div className='flex gap-2 py-1 cursor-pointer caret-transparent px-44 border-b-2 border-solid border-gray-400 bg-white sticky top-0'>
       {
             nextDays.map((item,index)=>{
                const isSelected = (selectedDate == item.nextDate)
