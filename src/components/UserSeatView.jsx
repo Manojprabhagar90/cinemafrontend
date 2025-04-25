@@ -102,7 +102,7 @@ const UserSeatView = () => {
           formData.append('user',JSON.stringify(userobj));
           formData.append('show',JSON.stringify(showobj));
           formData.append('movie',JSON.stringify(moviename));
-          axios.post(`${BASE_URL}/v1/bookings/add`,formData,{
+          axios.post(`${BASE_URL}/bookings/add`,formData,{
               headers: {
                 'Content-Type': 'application/json',
             }
